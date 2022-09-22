@@ -1,0 +1,6 @@
+class User:
+
+def _init_(self,username,password,basket):
+    self.username=username
+    self.password=password
+    self.basket=basket
