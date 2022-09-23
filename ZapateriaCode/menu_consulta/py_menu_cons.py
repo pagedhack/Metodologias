@@ -38,6 +38,7 @@ class Frame(tk.Frame):
         self.label_code.config(font= ("Comic Sans MS", 12, "bold"))
         self.label_code.configure(bg="beige")
         self.label_code.place(x= 20, y= 30)
+
         self.code = tk.Entry(self.window)   #Entrada
         self.code = tk.Entry(justify=tk.CENTER, width=10, font=("bold"))
         self.code.place(bordermode=INSIDE, x=80, y=33, height=25)
@@ -51,56 +52,70 @@ class Frame(tk.Frame):
         self.label_stock.config(font= ("Comic Sans MS", 10, "bold"))
         self.label_stock.configure(bg="beige")
         self.label_stock.place(x= 250, y= 30)
-        self.stock = tk.Entry(self.window)  #Entrada
 
+        self.stock = tk.Entry(self.window)  #Entrada
         self.stock = tk.Entry(justify=tk.CENTER, width=10)
         self.stock.place(bordermode=INSIDE,x=305, y=33, height=20)
         self.stock.config(state="readonly")
         self.stock.focus()
 
-
+        #categoria
         self.label_Categoria = tk.Label(self, text= "Categoria: ")#label
-        self.label_Categoria.config(font= ("Arial", 12))
+        self.label_Categoria.config(font= ("Comic Sans MS", 10, "bold"))
         self.label_Categoria.configure(bg="beige")
-        self.label_Categoria.place(x= 150, y= 100)
+        self.label_Categoria.place(x= 400, y= 30)
+
         self.categoria = tk.Entry(self.window)  #Entrada
-        self.categoria.place(x= 220, y=100)  
+        self.categoria = tk.Entry(justify=CENTER,width=10)
+        self.categoria.place(bordermode=INSIDE, x= 480, y=30, height=25)  
         self.categoria.config(state="readonly")
         self.categoria.focus()
 
+        #modelo
         self.label_model = tk.Label(self, text= "Modelo: ")#label
-        self.label_model.config(font= ("Arial", 10))
+        self.label_model.config(font= ("Comic Sans MS", 10, "bold"))
         self.label_model.configure(bg="beige")
-        self.label_model.place(x= 150, y= 150)
+        self.label_model.place(x= 20, y= 100)
+
         self.model = tk.Entry(self.window)  #Entrada
-        self.model.place(x=220, y=150)
+        self.model = tk.Entry(justify=CENTER,width=10)
+        self.model.place(bordermode=INSIDE, x= 100, y=100, height=25) 
         self.model.config(state="readonly")
         self.model.focus()
 
+        #size
         self.label_size = tk.Label(self, text= "Tamaño: ")#label
-        self.label_size.config(font= ("Arial", 10))
+        self.label_size.config(font= ("Comic Sans MS", 10, "bold"))
         self.label_size.configure(bg="beige")
-        self.label_size.place(x= 150, y= 200)
+        self.label_size.place(x= 20, y= 150)
+
         self.size = tk.Entry(self.window)  #Entrada
-        self.size.place(x=220, y=200)
+        self.size = tk.Entry(justify=CENTER,width=10)
+        self.size.place(bordermode=INSIDE, x= 100, y=150, height=25) 
         self.size.config(state="readonly")
         self.size.focus()   
 
+        #numero
         self.label_number = tk.Label(self, text= "Numero: ")#label
-        self.label_number.config(font= ("Arial", 10))
+        self.label_number.config(font= ("Comic Sans MS", 10, "bold"))
         self.label_number.configure(bg="beige")
-        self.label_number.place(x= 150, y= 250)
+        self.label_number.place(x= 20, y= 200)
+
         self.numbers = tk.Entry(self.window)  #Entrada
-        self.numbers.place(x=220, y=250)
+        self.numbers = tk.Entry(justify=CENTER,width=10)
+        self.numbers.place(bordermode=INSIDE, x= 100, y=200, height=25) 
         self.numbers.config(state="readonly")
         self.numbers.focus()
 
+        #color
         self.label_color = tk.Label(self, text= "Color: ")#label
-        self.label_color.config(font= ("Arial", 10))
+        self.label_color.config(font= ("Comic Sans MS", 10, "bold"))
         self.label_color.configure(bg="beige")
-        self.label_color.place(x= 370, y= 200) 
+        self.label_color.place(x= 20, y= 250) 
+
         self.color = tk.Entry(self.window)  #Entrada
-        self.color.place(x=420, y=200)
+        self.color = tk.Entry(justify=CENTER,width=10)
+        self.color.place(bordermode=INSIDE, x= 100, y=250, height=25) 
         self.color.config(state="readonly")
         self.color.focus() 
 
