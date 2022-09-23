@@ -5,9 +5,9 @@ from turtle import width
 import tkinter as tk
 
 from inicio.py_inicio import Login
-#from menu.py_menu import Frame, b_menu
 
-from menu_consulta.py_menu_cons import Frame,b_menu
+#from menu_admin.py_menu_admin import Frame, b_menu
+#from menu_consulta.py_menu_cons import Frame,b_menu
 
 def main():
     window = tk.Tk()
@@ -15,10 +15,10 @@ def main():
     window.resizable(False,False)
     window.iconbitmap('img/icono (1).ico')
 
-    b_menu(window)
-    app = Frame(window= window)
+    #b_menu(window)
+    #app = Frame(window= window)
 
-    #app = Login(window= window)
+    app = Login(window= window)
 
     app.mainloop()
 

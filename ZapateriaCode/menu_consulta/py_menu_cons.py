@@ -1,3 +1,4 @@
+from functools import _lru_cache_wrapper
 from tkinter import CENTER, INSIDE, Button, Image, PhotoImage
 import tkinter as tk
 from tkinter import ttk
@@ -43,7 +44,9 @@ class Frame(tk.Frame):
         self.code = tk.Entry(justify=tk.CENTER, width=10, font=("bold"))
         self.code.place(bordermode=INSIDE, x=80, y=33, height=25)
         self.code.focus()
-        self.buscar = Button(self.window,text="Buscar", height=1, width=5) # type: ignore
+
+        image = PhotoImage('lupa.gif')
+        self.buscar = Button(self.window,text="Buscar",height=1, width=5) # type: ignore
         self.buscar.place(x=173, y=33)
 
         
@@ -139,6 +142,10 @@ class Frame(tk.Frame):
         self.numbers.config(state="disabled")
         self.color.config(state="disabled")
         self.stock.config(state="disabled")
+
+    def tabla(self):
+        table = ttk.Treeview(self, columns='6', displaycolumns='2', height=10)
+
 
 
  #busquedad de zapato por imagen

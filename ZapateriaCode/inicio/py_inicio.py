@@ -10,6 +10,7 @@ class Login(tk.Frame):
         super().__init__(window,width= 300, height= 300)
         self.window = window
         self.pack()
+        self.administrador(window=window)
 
     def administrador(self, window):
 
