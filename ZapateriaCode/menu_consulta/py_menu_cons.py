@@ -1,7 +1,9 @@
 from functools import _lru_cache_wrapper
-from tkinter import CENTER, INSIDE, Button, Image, PhotoImage
+from struct import pack
+from tkinter import CENTER, INSIDE, X, Button, Image, PhotoImage
 import tkinter as tk
 from tkinter import ttk
+from tkinter.tix import Tree
 from turtle import width
 
 def b_menu(window):
@@ -22,6 +24,7 @@ class Frame(tk.Frame):
         self.pack()
 
         self.consulta_shoe()
+        self.tabla()
 
     def consulta_shoe(self):
 
@@ -144,9 +147,19 @@ class Frame(tk.Frame):
         self.stock.config(state="disabled")
 
     def tabla(self):
-        table = ttk.Treeview(self, columns='6', displaycolumns='2', height=10)
 
+        self.table = ttk.Treeview(self, 
+            columns = ('Codigo', 'Stock', 'Categoria', 'Modelo', 'Tamaño', 'Numero', 'Color'))
+        
+        self.table.heading('#0', text='Codigo')
+        self.table.heading('#1', text='Stock')
+        self.table.heading('#2', text='Categoria')
+        self.table.heading('#3', text='Modelo')
+        self.table.heading('#4', text='Tamaño')
+        self.table.heading('#5', text='Numero')
+        self.table.heading('#6', text='Color')
 
+        
 
  #busquedad de zapato por imagen
         #img = tkinter.PhotoImage(file="img.png")
