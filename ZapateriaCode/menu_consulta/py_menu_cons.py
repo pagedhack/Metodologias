@@ -42,7 +42,6 @@ class Frame(tk.Frame):
         self.code = tk.Entry(justify=tk.CENTER, width=15, font=("bold"))
         self.code.place(bordermode=INSIDE, x=80, y=50, height=25)
         self.code.focus()
-        #img = PhotoImage(file="lupa.gif")
         self.buscar = Button(self.window,text="Buscar", height=1, width=5) # type: ignore
         self.buscar.place(x=210, y=50)
 
@@ -51,10 +50,10 @@ class Frame(tk.Frame):
         self.label_stock = tk.Label(self, text= "Stock: ")#label stock
         self.label_stock.config(font= ("Comic Sans MS", 12, "bold"))
         self.label_stock.configure(bg="beige")
-        #self.label_stock.place(x= 150, y= 50)
+        self.label_stock.place(x= 280, y= 45)
         self.stock = tk.Entry(self.window)  #Entrada
         self.stock = tk.Entry(justify=tk.CENTER)
-        #self.stock.place(x=220, y=50, height=25)
+        self.stock.place(x=350, y=50, height=25)
         self.stock.config(state="readonly")
         self.stock.focus()
 
