@@ -1,4 +1,4 @@
-from tkinter import INSIDE, Button, Image, PhotoImage
+from tkinter import CENTER, INSIDE, Button, Image, PhotoImage
 import tkinter as tk
 from tkinter import ttk
 from turtle import width
@@ -18,44 +18,46 @@ class Frame(tk.Frame):
         super().__init__(window, width= 600, height= 500)
         self.window = window
         self.configure(bg="beige")
-        
         self.pack()
 
-        self.registro_shoe()
-        #self.tabla()
+        self.consulta_shoe()
 
-    def registro_shoe(self):
+    def consulta_shoe(self):
 
-        #busquedad de zapato por imagen
-        #img = tkinter.PhotoImage(file="img.png")
-        #n_img = tkinter.Label(self.window , image= img)
-        #n_img.place(x=100, y=100)
-        #n_img.pack()
+        #self.label_titulo = tk.Label(self, text= "-Consultas-")
+        #self.label_titulo.config(font= ("Comic Sans MS", 12, "bold"))
+        #self.label_titulo.configure(bg="blue")
+        #self.label_titulo.pack(anchor=CENTER)
+        #self.label_titulo.place(x= 0, y= 0, width=500)
+        
 
-        #labels y entradas de la consulta de los zapatos
+    #labels y entradas de la consulta de los zapatos
 
+        #code
         self.label_code = tk.Label(self, text= "Codigo: ")#label codigo
         self.label_code.config(font= ("Comic Sans MS", 12, "bold"))
         self.label_code.configure(bg="beige")
-        self.label_code.place(x= 20, y= 45)
+        self.label_code.place(x= 20, y= 30)
         self.code = tk.Entry(self.window)   #Entrada
-        self.code = tk.Entry(justify=tk.CENTER, width=15, font=("bold"))
-        self.code.place(bordermode=INSIDE, x=80, y=50, height=25)
+        self.code = tk.Entry(justify=tk.CENTER, width=10, font=("bold"))
+        self.code.place(bordermode=INSIDE, x=80, y=33, height=25)
         self.code.focus()
         self.buscar = Button(self.window,text="Buscar", height=1, width=5) # type: ignore
-        self.buscar.place(x=210, y=50)
+        self.buscar.place(x=173, y=33)
 
         
-
+        #stock
         self.label_stock = tk.Label(self, text= "Stock: ")#label stock
-        self.label_stock.config(font= ("Comic Sans MS", 12, "bold"))
+        self.label_stock.config(font= ("Comic Sans MS", 10, "bold"))
         self.label_stock.configure(bg="beige")
-        self.label_stock.place(x= 280, y= 45)
+        self.label_stock.place(x= 250, y= 30)
         self.stock = tk.Entry(self.window)  #Entrada
-        self.stock = tk.Entry(justify=tk.CENTER)
-        self.stock.place(x=350, y=50, height=25)
+
+        self.stock = tk.Entry(justify=tk.CENTER, width=10)
+        self.stock.place(bordermode=INSIDE,x=305, y=33, height=20)
         self.stock.config(state="readonly")
         self.stock.focus()
+
 
         self.label_Categoria = tk.Label(self, text= "Categoria: ")#label
         self.label_Categoria.config(font= ("Arial", 12))
@@ -122,3 +124,10 @@ class Frame(tk.Frame):
         self.numbers.config(state="disabled")
         self.color.config(state="disabled")
         self.stock.config(state="disabled")
+
+
+ #busquedad de zapato por imagen
+        #img = tkinter.PhotoImage(file="img.png")
+        #n_img = tkinter.Label(self.window , image= img)
+        #n_img.place(x=100, y=100)
+        #n_img.pack()
